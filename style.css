@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #00aaff;
+  color: white;
+}
+
+header input {
+  padding: 5px;
+  width: 200px;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#trick-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.trick-item {
+  border: 1px solid #aaa;
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+.dark-mode header {
+  background-color: #333;
+}
