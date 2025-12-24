@@ -1,0 +1,134 @@
+// ===== ALL TRICKS DATA =====
+const flowboardTricks = [
+  // Fundamental
+  {id:"360_spin", name:"360 Spin", level:"Fundamental", how:"Perform a full rotation in the air.", pre:[], video:"https://www.youtube.com/embed/example1"},
+  {id:"assisted_360_spin", name:"Assisted 360 Spin", level:"Fundamental", how:"Perform a 360 spin with assistance from the wave or coach.", pre:["360_spin"], video:"https://www.youtube.com/embed/example2"},
+  {id:"assisted_frontside_360_spin", name:"Assisted Frontside 360 Spin", level:"Fundamental", how:"Spin frontside 360 with assistance.", pre:["assisted_360_spin"], video:"https://www.youtube.com/embed/example3"},
+  {id:"frontside_360_spin", name:"Frontside 360 Spin", level:"Fundamental", how:"Perform a full frontside rotation in the air.", pre:["360_spin"], video:"https://www.youtube.com/embed/example4"},
+
+  // Beginner
+  {id:"acid_drop", name:"Acid Drop", level:"Beginner", how:"Drop into the wave with board nose first.", pre:[], video:"https://www.youtube.com/embed/example5"},
+  {id:"backside_180_air", name:"Backside 180 Air", level:"Beginner", how:"Jump and rotate backside 180 in the air.", pre:[], video:"https://www.youtube.com/embed/example6"},
+  {id:"body_varial", name:"Body Varial", level:"Beginner", how:"Rotate your body while keeping the board under control.", pre:[], video:"https://www.youtube.com/embed/example7"},
+  {id:"fast_plant", name:"Fast Plant", level:"Beginner", how:"Quickly plant your hands to execute the trick.", pre:[], video:"https://www.youtube.com/embed/example8"},
+  {id:"lip_slide", name:"Lip Slide", level:"Beginner", how:"Slide along the lip of the wave.", pre:[], video:"https://www.youtube.com/embed/example9"},
+  {id:"nozzle_slide", name:"Nozzle Slide", level:"Beginner", how:"Slide on the nozzle section of the wave.", pre:[], video:"https://www.youtube.com/embed/example10"},
+  {id:"ollie", name:"Ollie", level:"Beginner", how:"Pop the board into the air without grabbing.", pre:[], video:"https://www.youtube.com/embed/example11"},
+  {id:"shuvit", name:"Shuvit", level:"Beginner", how:"Spin the board 180 under your feet without spinning your body.", pre:[], video:"https://www.youtube.com/embed/example12"},
+
+  // Intermediate
+  {id:"360_shuvit", name:"360 Shuvit", level:"Intermediate", how:"Spin the board 360 under your feet without spinning your body.", pre:["shuvit"], video:"https://www.youtube.com/embed/example13"},
+  {id:"540_big_spin", name:"540 Big Spin", level:"Intermediate", how:"Rotate board 540 degrees with body spin.", pre:["360_shuvit"], video:"https://www.youtube.com/embed/example14"},
+  {id:"backside_180_judo", name:"Backside 180 Judo", level:"Intermediate", how:"Perform backside 180 while grabbing board like a judo throw.", pre:["backside_180_air"], video:"https://www.youtube.com/embed/example15"},
+  {id:"backside_360_air", name:"Backside 360 Air", level:"Intermediate", how:"Perform a full backside 360 rotation in the air.", pre:["backside_180_air"], video:"https://www.youtube.com/embed/example16"},
+  {id:"backside_heel_flip", name:"Backside Heel Flip", level:"Intermediate", how:"Kick with heel while doing backside rotation.", pre:["backside_180_air"], video:"https://www.youtube.com/embed/example17"},
+  {id:"big_spin", name:"Big Spin", level:"Intermediate", how:"360 body rotation + 360 board rotation.", pre:["360_shuvit"], video:"https://www.youtube.com/embed/example18"},
+  {id:"boneless", name:"Boneless", level:"Intermediate", how:"Grab board, jump off wave, rotate.", pre:["ollie"], video:"https://www.youtube.com/embed/example19"},
+  {id:"fakie_540_big_spin", name:"Fakie 540 Big Spin", level:"Intermediate", how:"Perform Big Spin while riding fakie stance.", pre:["540_big_spin"], video:"https://www.youtube.com/embed/example20"},
+  {id:"fakie_big_spin", name:"Fakie Big Spin", level:"Intermediate", how:"Perform Big Spin while riding fakie stance.", pre:["big_spin"], video:"https://www.youtube.com/embed/example21"},
+  {id:"frontside_180_air", name:"Frontside 180 Air", level:"Intermediate", how:"Jump and rotate frontside 180 in the air.", pre:["frontside_360_spin"], video:"https://www.youtube.com/embed/example22"},
+  {id:"frontside_360_air", name:"Frontside 360 Air", level:"Intermediate", how:"Perform frontside 360 rotation in the air.", pre:["frontside_180_air"], video:"https://www.youtube.com/embed/example23"},
+  {id:"frontside_360_shuvit", name:"Frontside 360 Shuvit", level:"Intermediate", how:"Frontside 360 board spin without body rotation.", pre:["360_shuvit"], video:"https://www.youtube.com/embed/example24"},
+  {id:"frontside_heel_flip", name:"Frontside Heel Flip", level:"Intermediate", how:"Kick with heel while spinning frontside.", pre:["frontside_360_spin"], video:"https://www.youtube.com/embed/example25"},
+  {id:"frontside_shuvit", name:"Frontside Shuvit", level:"Intermediate", how:"Frontside 180 board spin without body rotation.", pre:["shuvit"], video:"https://www.youtube.com/embed/example26"},
+  {id:"gumby", name:"Gumby (Shuvit + Body Varial)", level:"Intermediate", how:"Combine a Shuvit with Body Varial.", pre:["360_shuvit","body_varial"], video:"https://www.youtube.com/embed/example27"},
+  {id:"one_footed_manual", name:"One Footed Manual", level:"Intermediate", how:"Balance on one foot while riding the wave.", pre:["ollie"], video:"https://www.youtube.com/embed/example28"},
+  {id:"pop_shuvit", name:"Pop Shuvit", level:"Intermediate", how:"Pop and spin board 180.", pre:["shuvit"], video:"https://www.youtube.com/embed/example29"},
+  {id:"pterodactyl", name:"Pterodactyl", level:"Intermediate", how:"Jump while keeping board flat and arms extended.", pre:["ollie"], video:"https://www.youtube.com/embed/example30"},
+
+  // Advanced
+  {id:"360_flip", name:"360 Flip (Tre Flip)", level:"Advanced", how:"Combine 360 Shuvit with Kickflip.", pre:["360_shuvit","kick_flip"], video:"https://www.youtube.com/embed/example31"},
+  {id:"540_bigger_spin", name:"540 Bigger Spin", level:"Advanced", how:"540 board rotation with bigger body spin.", pre:["540_big_spin"], video:"https://www.youtube.com/embed/example32"},
+  {id:"540_flip", name:"540 Flip", level:"Advanced", how:"Kickflip with 540 body rotation.", pre:["540_big_spin"], video:"https://www.youtube.com/embed/example33"},
+  {id:"big_flip", name:"Big Flip", level:"Advanced", how:"360 body spin + Kickflip.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example34"},
+  {id:"big_spin_grab", name:"Big Spin Grab", level:"Advanced", how:"Big Spin with board grab.", pre:["big_spin"], video:"https://www.youtube.com/embed/example35"},
+  {id:"bigger_spin", name:"Bigger Spin", level:"Advanced", how:"Enhanced Big Spin with more rotation.", pre:["big_spin"], video:"https://www.youtube.com/embed/example36"},
+  {id:"disco_flip", name:"Disco Flip", level:"Advanced", how:"Kickflip with added body twist.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example37"},
+  {id:"double_kick_flip", name:"Double Kick Flip", level:"Advanced", how:"Kickflip with two board rotations.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example38"},
+  {id:"fakie_bigger_spin", name:"Fakie Bigger Spin", level:"Advanced", how:"Bigger Spin riding fakie.", pre:["bigger_spin"], video:"https://www.youtube.com/embed/example39"},
+  {id:"frontside_big_spin", name:"Frontside Big Spin", level:"Advanced", how:"Frontside rotation plus board spin.", pre:["frontside_360_spin"], video:"https://www.youtube.com/embed/example40"},
+  {id:"hard_flip", name:"Hard Flip", level:"Advanced", how:"Frontside Flip with Kickflip combined.", pre:["kick_flip","frontside_360_spin"], video:"https://www.youtube.com/embed/example41"},
+  {id:"heel_flip", name:"Heel Flip", level:"Advanced", how:"Kickboard with heel flick.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example42"},
+  {id:"inward_heel_flip", name:"Inward Heel Flip", level:"Advanced", how:"Backside Kickflip with heel.", pre:["heel_flip"], video:"https://www.youtube.com/embed/example43"},
+  {id:"kick_flip", name:"Kick Flip", level:"Advanced", how:"Flip the board 360 along its axis.", pre:["ollie"], video:"https://www.youtube.com/embed/example44"},
+  {id:"varial_flip", name:"Varial Flip", level:"Advanced", how:"Kickflip combined with Shuvit.", pre:["kick_flip","shuvit"], video:"https://www.youtube.com/embed/example45"},
+  {id:"varial_heel_flip", name:"Varial Heel Flip", level:"Advanced", how:"Heel Flip + Shuvit.", pre:["heel_flip","shuvit"], video:"https://www.youtube.com/embed/example46"},
+
+  // Expert
+  {id:"360_hard_flip", name:"360 Hard Flip", level:"Expert", how:"Hard Flip + 360 body spin.", pre:["hard_flip"], video:"https://www.youtube.com/embed/example47"},
+  {id:"540_big_flip", name:"540 Big Flip", level:"Expert", how:"Kickflip with 540 rotation.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example48"},
+  {id:"540_shuvit", name:"540 Shuvit", level:"Expert", how:"540 rotation with board spin.", pre:["540_big_spin"], video:"https://www.youtube.com/embed/example49"},
+  {id:"720_big_flip", name:"720 Big Flip", level:"Expert", how:"720 body spin + Kickflip.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example50"},
+  {id:"bigger_flip", name:"Bigger Flip", level:"Expert", how:"Enhanced Kickflip with more rotation.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example51"},
+  {id:"blizzard", name:"Blizzard", level:"Expert", how:"Special advanced flip trick.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example52"},
+  {id:"dolphin_flip", name:"Dolphin Flip", level:"Expert", how:"Kickflip with body in dolphin-like motion.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example53"},
+  {id:"front_foot_impossible", name:"Front Foot Impossible", level:"Expert", how:"Impossible trick using front foot.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example54"},
+  {id:"frontside_big_heel", name:"Frontside Big Heel", level:"Expert", how:"Frontside rotation with heel flip.", pre:["heel_flip"], video:"https://www.youtube.com/embed/example55"},
+  {id:"frontside_flip", name:"Frontside Flip", level:"Expert", how:"Frontside rotation plus flip.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example56"},
+  {id:"nightmare_flip", name:"Nightmare Flip", level:"Expert", how:"Complex flip combining rotations.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example57"},
+  {id:"tidal_wave", name:"Tidal Wave", level:"Expert", how:"Extreme expert trick riding the wave.", pre:["kick_flip"], video:"https://www.youtube.com/embed/example58"}
+];
+
+// Optional: empty arrays for Bodyboard / Standup for now
+const bodyboardTricks = [];
+const standupTricks = [];
+
+let currentCategory = "flowboard";
+let tricks = flowboardTricks; // default
+
+const trickList = document.getElementById("trick-list");
+const searchBar = document.getElementById("search-bar");
+const darkLightBtn = document.getElementById("dark-light-toggle");
+
+// Display tricks
+function displayTricks(tricksArray) {
+  trickList.innerHTML = "";
+  const levels = ["Fundamental","Beginner","Intermediate","Advanced","Expert"];
+  levels.forEach(level => {
+    tricksArray.filter(t=>t.level===level).forEach(trick => {
+      const div = document.createElement("div");
+      div.className = "trick-item";
+      div.innerHTML = `<strong>${trick.name}</strong><br>${trick.level}`;
+      div.onclick = () => showTrick(trick);
+      trickList.appendChild(div);
+    });
+  });
+}
+
+// Show trick page
+function showTrick(trick) {
+  trickList.innerHTML = `
+    <h2>${trick.name}</h2>
+    <p><strong>Difficulty:</strong> ${trick.level}</p>
+    <p><strong>How to do it:</strong> ${trick.how}</p>
+    <p><strong>Prerequisites:</strong> ${trick.pre.length > 0 ? trick.pre.join(", ") : "None"}</p>
+    <iframe width="420" height="315" src="${trick.video}" frameborder="0" allowfullscreen></iframe>
+    <button onclick="displayTricks(tricks)">Back to list</button>
+  `;
+}
+
+// Category buttons
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    currentCategory = btn.dataset.category;
+    if(currentCategory==="flowboard") tricks=flowboardTricks;
+    if(currentCategory==="bodyboard") tricks=bodyboardTricks;
+    if(currentCategory==="standup") tricks=standupTricks;
+    displayTricks(tricks);
+  });
+});
+
+// Search bar
+searchBar.addEventListener("input", () => {
+  const query = searchBar.value.toLowerCase();
+  const filtered = tricks.filter(t => t.name.toLowerCase().includes(query));
+  displayTricks(filtered);
+});
+
+// Dark/Light toggle
+darkLightBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+// Initial display
+displayTricks(tricks);
